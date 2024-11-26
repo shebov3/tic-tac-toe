@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbyolkik805kh"]
+
+[ext_resource type="Texture2D" uid="uid://ckb2trmywpcie" path="res://Board.png" id="1_qghug"]
+[ext_resource type="Script" path="res://game.gd" id="1_wetp2"]
+[ext_resource type="Script" path="res://Board.gd" id="2_4itug"]
+[ext_resource type="PackedScene" uid="uid://511didf3g67q" path="res://Area2D.tscn" id="3_ww3g7"]
+[ext_resource type="FontFile" uid="uid://1yuyaudis21f" path="res://Fonts/FiraCode-Medium.ttf" id="4_oihnn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7juf"]
+bg_color = Color(6.35326e-06, 0.923865, 0.919139, 0.647059)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Game" type="Node2D"]
+scale = Vector2(6, 6)
+script = ExtResource("1_wetp2")
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(42.6667, 53.3333)
+texture = ExtResource("1_qghug")
+script = ExtResource("2_4itug")
+metadata/_edit_group_ = true
+
+[node name="12" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(20, 0)
+
+[node name="11" parent="Board" instance=ExtResource("3_ww3g7")]
+
+[node name="22" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(20, 20.8)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="21" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(-7.62939e-06, 20.8)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="20" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(-20, 20.8)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="02" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(20, -20)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="01" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(-3.8147e-06, -20)
+
+[node name="00" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(-20, -20)
+
+[node name="10" parent="Board" instance=ExtResource("3_ww3g7")]
+position = Vector2(-20, 0)
+
+[node name="Visualization" type="Node2D" parent="."]
+position = Vector2(132, 13.3333)
+
+[node name="BFS" type="Button" parent="."]
+offset_left = 9.33333
+offset_top = 88.0
+offset_right = 309.333
+offset_bottom = 202.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_hover_pressed_color = Color(0.385558, 0.577629, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.5023, 0.43551, 1)
+theme_override_colors/font_focus_color = Color(1.92523e-06, 0.85967, 0.790514, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oihnn")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7juf")
+text = "BFS
+"
+
+[node name="DFS" type="Button" parent="."]
+offset_left = 26.3333
+offset_top = 88.0
+offset_right = 326.333
+offset_bottom = 202.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_hover_pressed_color = Color(0.385558, 0.577629, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.5023, 0.43551, 1)
+theme_override_colors/font_focus_color = Color(1.92523e-06, 0.85967, 0.790514, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oihnn")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7juf")
+text = "DFS"
+
+[node name="IDS" type="Button" parent="."]
+offset_left = 42.6666
+offset_top = 88.0
+offset_right = 342.667
+offset_bottom = 202.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_hover_pressed_color = Color(0.385558, 0.577629, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.5023, 0.43551, 1)
+theme_override_colors/font_focus_color = Color(1.92523e-06, 0.85967, 0.790514, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oihnn")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7juf")
+text = "IDS
+"
+
+[node name="UCS" type="Button" parent="."]
+offset_left = 59.9999
+offset_top = 88.0
+offset_right = 360.0
+offset_bottom = 202.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_hover_pressed_color = Color(0.385558, 0.577629, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.5023, 0.43551, 1)
+theme_override_colors/font_focus_color = Color(1.92523e-06, 0.85967, 0.790514, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oihnn")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b7juf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7juf")
+text = "UCS
+"

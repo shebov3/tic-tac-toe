@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbyolkik805kh"]
+
+[ext_resource type="Texture2D" uid="uid://ckb2trmywpcie" path="res://Board.png" id="1_6nc23"]
+[ext_resource type="Script" path="res://Board.gd" id="2_rnavo"]
+[ext_resource type="PackedScene" uid="uid://511didf3g67q" path="res://Area2D.tscn" id="3_oba8s"]
+
+[node name="Game" type="Node2D"]
+scale = Vector2(8, 8)
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(40, 40)
+texture = ExtResource("1_6nc23")
+script = ExtResource("2_rnavo")
+metadata/_edit_group_ = true
+
+[node name="12" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(20, 0)
+
+[node name="11" parent="Board" instance=ExtResource("3_oba8s")]
+
+[node name="22" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(20, 20.8)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="21" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(-7.62939e-06, 20.8)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="20" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(-20, 20.8)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="02" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(20, -20)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="01" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(-3.8147e-06, -20)
+
+[node name="00" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(-20, -20)
+
+[node name="10" parent="Board" instance=ExtResource("3_oba8s")]
+position = Vector2(-20, 0)
+
+[node name="Prediction" type="Node2D" parent="."]
+position = Vector2(108, 14)
